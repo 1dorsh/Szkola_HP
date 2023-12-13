@@ -1,0 +1,9 @@
+<p>wyszukiwanie numeru telefonu</p>
+
+
+<script>
+    let tekst = "tel. 654287955";
+    let wzorzec = /\d\d\d\d\d\d\d\d\d/;
+    let pozycja = tekst.search( wzorzec );
+    document.write('numer znaleziono na pozycji: '+pozycja);
+</script>
