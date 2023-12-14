@@ -1,0 +1,9 @@
+<h1>Wyrażenie regularne - adres email</h1>
+
+
+<script>
+    let tekst = "adres email: john1.doe2@in.pl";
+    let wzorzec = /[\w_\.-]+@([-A-z0-9]+\.)+[A-z]/;
+    let pozycja = tekst.search( wzorzec );
+    document.write( tekst.slice(pozycja));
+</script>

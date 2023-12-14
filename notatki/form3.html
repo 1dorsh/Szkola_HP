@@ -1,0 +1,25 @@
+<h3>Walidacja formularzy - adres email</h3>
+
+<form name="myform" id="form1" action="write2DB.php">
+    <label for="name">Wprowadź adres email*</label>
+    <input type="text" name="email" id="email">
+    <p id="wynik"></p>
+    <input type="submit" value="wyślij" id="send" placeholder="wyslij">
+</form>
+<script>
+    document.querySelector("#send").addEventListener("click", checkMail);
+
+    function checkMail( event ){
+        let mailText=document.querySelector("#email").value;
+        let reg_mail=/[\w_\.-]+@([-A-z0-9]+\.)+[A-z]/;
+        let position=mailText.search(reg_mail);
+        if(position== -1){  //nie znaleziono
+            document.querySelector("#wynik").innerHTML="niepoprawny adres email";
+            event.preventDefault();
+        }
+        if (mailText=="") {
+            document.querySelector("#wynik").innerHTML="Pole nie może być puste";
+            return false;
+        }
+    }
+</script>

@@ -1,0 +1,9 @@
+<h1>wyszukiwanie pliku *.gif</h1>
+
+
+<script>
+    let tekst = "ikona jest w pliku logo.gif";
+    let wzorzec = /\S*\.gif/i;
+    let pozycja = tekst.search( wzorzec );
+    document.write( 'znaleziono: ' + tekst.slice(pozycja));
+</script>

@@ -1,0 +1,9 @@
+<h3>Wyrażenie regularne - wyszukiwanie daty</h3>
+
+
+<script>
+    let tekst = "Maków Podhalański 17.11.2022r";
+    let wzorzec = /([0123]?\d)[\. -\/]([01]?\d)[\. -\/](\d{4})/;
+    let pozycja = tekst.search( wzorzec );
+    document.write( tekst.slice(pozycja));
+</script>

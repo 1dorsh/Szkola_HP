@@ -1,0 +1,25 @@
+<h3>Walidacja formularzy - kontrola liczb</h3>
+<p id="wynik"></p>
+
+<form action="write2DB.php">
+    <label for="liczba">Wprowadź liczbę</label>
+    <input type="number" name="liczba" id="liczba">
+    <button type="button" onclick="checkNumber()">
+        Wyślij
+    </button>
+    <p>*pole wymagane</p>
+</form>
+<script>
+    function checkNumber(){
+        const MIN=1;
+        const MAX=10;
+        var result;
+        let liczba=document.querySelector("#liczba").value;
+        if(liczba>=MIN && liczba <=MAX){
+            result="Dane poprawne";
+        }else{
+            result="Dane niepoprawne";
+        }
+    document.querySelector("#wynik").innerHTML=result;
+    }
+</script>
